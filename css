@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #151515;
+  color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+a {
+  color: #ebebeb;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  gap: 15px;
+  list-style: none;
+}
+nav ul li a:hover {
+  color: #ff6f61;
+}
+header {
+  background-color: #1f1f1f;
+  display: flex;
+}
+h1 {
+  width: 90px;
+  padding: 7px;
+}
+nav {
+  width: calc(100% - 90px);
+}
+
+footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 1rem;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  gap: 10px;
+  padding: 10px;
+}
+img {
+  height: 90%;
+  width: auto;
+  max-width: 100%;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 500px;
+  width: 100%;
+  border: 1px solid #4a4a4a;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px #51515167;
+}
+section:first-child {
+  align-items: center;
+}
+ol {
+  list-style: inside;
+  text-align: left;
+}
+.img-loading {
+  opacity: 0.3;
+  background-color: #4a4a4a;
+  filter: grayscale(90%) blur(20px);
+  transition: all 250ms ease-in-out;
+}
+.img-loaded {
+  opacity: 1;
+  background: none;
+  filter: none;
+  animation: faideIn 1s ease-in-out;
+}
+
+p {
+  margin: 5px;
+  padding: 10px;
+  line-height: 1.8;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #4a4a4a;
+  border-radius: 3px;
+  background-color: #383838;
+  width: 320px;
+}
+button[type="submit"] {
+  padding: 10px;
+  background-color: #bb5046;
+  color: #ebebeb;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color: #a91006;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+  section {
+    height: auto;
+  }
+}
